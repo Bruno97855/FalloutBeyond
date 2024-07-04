@@ -2,6 +2,11 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
+// Configura o electron-reload
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+});
+
 // Função para criar a janela principal
 function createWindow() {
   // Caminho para o script de pré-carregamento (renderer.js)
