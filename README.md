@@ -18,17 +18,17 @@ Siga os passos abaixo para configurar o projeto no seu computador:
 
 2. Instale as dependências do Node.js:
 
-  No diretório do projeto, execute o seguinte comando para instalar todas as dependências necessárias listadas no package.json:
-  npm install
+   No diretório do projeto, execute o seguinte comando para instalar todas as dependências necessárias listadas no package.json:
+   npm install
 
 3. Instale o Electron globalmente (se necessário):
 
-  Se você ainda não tem o Electron instalado globalmente, você pode instalá-lo usando o npm:
-  npm install -g electron
+   Se você ainda não tem o Electron instalado globalmente, você pode instalá-lo usando o npm:
+   npm install -g electron
 
-4. Após instalar todas as dependências, você pode executar a aplicação com o seguinte comando:
+5. Após instalar todas as dependências, você pode executar a aplicação com o seguinte comando:
 
-  npm start
+   npm start
 
 ## Criando o Instalador
 
@@ -57,11 +57,12 @@ Siga os passos abaixo para configurar o projeto no seu computador:
 
    npm run build
 
-Estrutura do Projeto
+## Estrutura do Projeto
+
 main.js: Arquivo principal que inicializa a aplicação Electron.
 Business/renderer.js: Script de pré-carregamento que é executado antes que a página web seja carregada.
 Views/index.html: Página HTML principal da aplicação.
 Icons/vault-tec.svg: Ícone da aplicação.
 
-Contribuição
+## Contribuição
 Se você quiser contribuir para este projeto, sinta-se à vontade para fazer um fork do repositório, criar um branch para suas mudanças e enviar um pull request.
