@@ -1,0 +1,45 @@
+{
+  "name": "csc",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "productName": "Fallout Beyond",
+    "directories": {
+      "output": "C:/Projetos/AppInstalls"
+    },
+    "win": {
+      "icon": "src/Icons/vault-boy.ico"
+    },
+    "mac": {
+      "icon": "src/Icons/vault-boy.ico"
+    },
+    "linux": {
+      "icon": "src/Icons/vault-boy.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "src/Icons/vault-boy.ico",
+      "uninstallerIcon": "src/Icons/vault-boy.ico",
+      "installerHeaderIcon": "src/Icons/vault-boy.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Fallout Beyond"
+    }
+  }
+}

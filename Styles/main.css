@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.sometype-mono {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+ }
+
+ body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Para cobrir toda a tela */
+    background:
+        linear-gradient(to bottom, 
+          rgb(0, 0, 0) 40%,
+          rgba(1, 65, 26, 0.979) 80%,
+          rgb(0, 0, 0) 100%
+        );
+    background-size: 100% 20px; /* Largura total da tela e altura de 300 pixels */
+    animation: stripes 20s linear infinite; /* Animar com duração de 10 segundos */
+  }
+  
+  @keyframes stripes {
+    0% {
+      background-position: 0 0; /* Começa do topo */
+    }
+    100% {
+      background-position: 0 -300px; /* Desce até 300 pixels abaixo do topo */
+    }
+  }
+
+.font-style {
+    color: #7abca0 !important;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
