@@ -7,7 +7,7 @@
   font-style: normal;
  }
 
- body {
+ .background-body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Para cobrir toda a tela */
@@ -17,7 +17,7 @@
           rgba(1, 65, 26, 0.979) 80%,
           rgb(0, 0, 0) 100%
         );
-    background-size: 100% 20px; /* Largura total da tela e altura de 300 pixels */
+    background-size: 100% 15px; /* Largura total da tela e altura de 300 pixels */
     animation: stripes 20s linear infinite; /* Animar com duração de 10 segundos */
   }
   
@@ -34,6 +34,46 @@
     color: #7abca0 !important;
     font-family: "Kode Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
 }
+
+.xxxlarge-font{
+  font-size: xxx-large;
+}
+
+.xlxarge-font{
+  font-size: xx-large;
+}
+
+.xlarge-font{
+  font-size: x-large;
+}
+
+.mid-screen {
+  display: flex;
+  justify-content: center;
+}
+
+.full-screen {
+  border: solid 3px #7abca0;
+  margin: 25px;
+  height: 92vh;
+  box-sizing: border-box; /* Garante que padding e border não aumentem a altura total */
+  padding: 20px; /* Exemplo de padding interno */
+}
+
+.div-mid-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+.menu-button-style {
+  background-color: transparent;
+  border: solid 3px #7abca0;
+  width: 200px;
+  height: 55px;
+  margin: 12px;
+}
+
