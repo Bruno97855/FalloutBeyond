@@ -1,18 +1,21 @@
 // Importa os módulos necessários do Electron
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 
-//Configura o electron-reload
+// Configura o electron-reload
 require('electron-reload')(__dirname, {
   electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
 });
 
+let mainWindow; // Declaração da variável mainWindow
+
 // Função para criar a janela principal
 function createWindow() {
   // Caminho para o script de pré-carregamento (renderer.js)
-  const preloadPath = path.join(__dirname, 'Business','renderer.js');
+  const preloadPath = path.join(__dirname, 'Business', 'renderer.js');
+  
   // Cria uma nova janela do navegador
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
     icon: path.join(__dirname, 'Icons', 'vault-boy.ico'),
@@ -30,6 +33,7 @@ function createWindow() {
 
   // Caminho para o arquivo index.html que será carregado na janela
   const indexPath = path.join(__dirname, 'Views', 'index.html');
+  
   // Carrega o arquivo index.html na janela principal
   mainWindow.loadFile(indexPath).then(() => {
     // Abre as ferramentas de desenvolvedor quando o arquivo é carregado com sucesso
@@ -61,4 +65,22 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+});
+
+// Quando o evento 'main' é recebido, carregue 'index.html'
+ipcMain.on('main', () => {
+  // Carrega o arquivo 'index.html' na janela principal
+  mainWindow.loadFile(path.join(__dirname, 'Views', 'index.html')).catch((err) => {
+    // Se houver um erro ao carregar o arquivo, exiba-o no console
+    console.error('Error loading index.html:', err);
+  });
+});
+
+// Quando o evento 'credits' é recebido, carregue 'credits.html'
+ipcMain.on('credits', () => {
+  // Carrega o arquivo 'credits.html' na janela principal
+  mainWindow.loadFile(path.join(__dirname, 'Views', 'credits.html')).catch((err) => {
+    // Se houver um erro ao carregar o arquivo, exiba-o no console
+    console.error('Error loading credits.html:', err);
+  });
 });
