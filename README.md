@@ -14,7 +14,7 @@ Siga os passos abaixo para configurar o projeto no seu computador:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+   git clone https://github.com/Bruno97855/FalloutBeyond.git
 
 2. Instale as dependências do Node.js:
 
@@ -40,22 +40,22 @@ Siga os passos abaixo para configurar o projeto no seu computador:
 
    "scripts": {
   "start": "electron .",
-  "build": "electron-builder"
+  "dist": "electron-builder"
   }
 
 3. Configure o electron-builder no package.json:
 
   "build": {
-    "appId": "com.seuprojeto.ficha",
-    "win": {
-      "target": "nsis",
-      "icon": "path/to/your/icon.ico"
-    }
+    "appId": "com.example.app",
+    "productName": "Fallout Beyond",
+    "directories": {
+      "output": "dist"//coloque o caminho de sída que preferir
+    },
   }
 
 4. Crie o instalador:
 
-   npm run build
+   npm run dist
 
 ## Estrutura do Projeto
 
