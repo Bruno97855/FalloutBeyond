@@ -1,7 +1,7 @@
 # FalloutBeyond
 # Projeto de Ficha de Personagem
 
-Este projeto é uma aplicação de desktop para gerenciar fichas de personagens, construída com Electron e Node.js.
+Este projeto é uma aplicação para gerenciar fichas de personagens, construída com Electron e Node.js.
 
 ## Requisitos
 
