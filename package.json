@@ -13,31 +13,30 @@
   "description": "",
   "devDependencies": {
     "electron": "^31.1.0",
-    "electron-builder": "^24.13.3",
-    "electron-reload": "^2.0.0-alpha.1"
+    "electron-builder": "^24.13.3"
   },
   "build": {
     "appId": "com.example.app",
     "productName": "Fallout Beyond",
     "directories": {
-      "output": "C:/Projetos/AppInstalls"
+      "output": "dist"
     },
     "win": {
-      "icon": "src/Icons/vault-boy.ico"
+      "icon": "./Icons/vault-boy.ico"
     },
     "mac": {
-      "icon": "src/Icons/vault-boy.ico"
+      "icon": "./Icons/vault-boy.ico"
     },
     "linux": {
-      "icon": "src/Icons/vault-boy.ico"
+      "icon": "./Icons/vault-boy.ico"
     },
     "nsis": {
       "oneClick": false,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "src/Icons/vault-boy.ico",
-      "uninstallerIcon": "src/Icons/vault-boy.ico",
-      "installerHeaderIcon": "src/Icons/vault-boy.ico",
+      "installerIcon": "./Icons/vault-boy.ico",
+      "uninstallerIcon": "./Icons/vault-boy.ico",
+      "installerHeaderIcon": "./Icons/vault-boy.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Fallout Beyond"

@@ -1,15 +1,12 @@
-# Node.js dependencies
+# Node modules
 node_modules/
 
-# Log files
-*.log
-
-# Build output
+# Diretórios de saída do build
 dist/
 
-# OS generated files
+# Arquivos do sistema operacional
 .DS_Store
 Thumbs.db
 
-# Environmental variables
+# Arquivos de variáveis de ambiente
 .env
