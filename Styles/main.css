@@ -31,7 +31,7 @@
   }
 
 .font-style {
-    color: #7abca0 !important;
+    color: #5db37f !important;
     font-family: "Kode Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
@@ -55,7 +55,7 @@
 }
 
 .full-screen {
-  border: solid 3px #7abca0;
+  border: solid 3px #5db37f;
   margin: 25px;
   height: 92vh;
   box-sizing: border-box; /* Garante que padding e border não aumentem a altura total */
@@ -68,12 +68,30 @@
   align-items: center;
   margin: 50px;
 }
+.div-rigth-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 50px;
+}
+.div-left-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px;
+}
 
 .menu-button-style {
   background-color: transparent;
-  border: solid 3px #7abca0;
+  border: solid 3px #5db37f;
   width: 200px;
   height: 55px;
   margin: 12px;
+}
+
+.two-parts-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 

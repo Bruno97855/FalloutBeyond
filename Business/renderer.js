@@ -1,4 +1,5 @@
-console.log("bateu");
-function saveCharacter() {
-  console.log("bateu");
-}
+
+document.getElementById('credits').addEventListener('click', () => {
+  const { ipcRenderer } = require('electron');
+  ipcRenderer.send('credits');
+});
