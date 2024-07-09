@@ -2,10 +2,10 @@
 const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 
-// // Configura o electron-reload, deve ser retirado para a hora da instalação
-// require('electron-reload')(__dirname, {
-//   electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
-// });
+// Configura o electron-reload, deve ser retirado para a hora da instalação
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+});
 
 let mainWindow; // Declaração da variável mainWindow
 
@@ -16,8 +16,8 @@ function createWindow() {
   
   // Cria uma nova janela do navegador
   mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 1300,
+    height: 900,
     icon: path.join(__dirname, 'Icons', 'vault-boy.ico'),
     webPreferences: {
       // Especifica o script de pré-carregamento a ser usado

@@ -1,0 +1,22 @@
+.div-rigth-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 50px;
+  }
+
+  .div-left-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px;
+    justify-content: space-between;
+  }
+
+  .two-parts-horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+  }
+  
