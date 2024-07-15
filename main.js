@@ -84,3 +84,12 @@ ipcMain.on('credits', () => {
     console.error('Error loading credits.html:', err);
   });
 });
+
+// Quando o evento 'credits' é recebido, carregue 'credits.html'
+ipcMain.on('newGame', () => {
+  // Carrega o arquivo 'credits.html' na janela principal
+  mainWindow.loadFile(path.join(__dirname, 'Views', 'newGame.html')).catch((err) => {
+    // Se houver um erro ao carregar o arquivo, exiba-o no console
+    console.error('Error loading newGame.html:', err);
+  });
+});
