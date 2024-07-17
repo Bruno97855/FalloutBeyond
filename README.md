@@ -26,6 +26,10 @@ Siga os passos abaixo para configurar o projeto no seu computador:
    Se você ainda não tem o Electron instalado globalmente, você pode instalá-lo usando o npm:
    npm install -g electron
 
+4. Instale o Electron-Reload (se necessário):
+
+   O Electron-Reload é uma ferramenta para o desenvolvimento rápido e apenas para desenvolvimento, leia "Possiveís erros de build" mais a baixo. comando para download do Electron-Reload: npm install electron-reload
+
 5. Após instalar todas as dependências, você pode executar a aplicação com o seguinte comando:
 
    npm start
