@@ -41,7 +41,7 @@
   font-size: xxx-large;
 }
 
-.xxlxarge-font{
+.xxlarge-font{
   font-size: xx-large;
 }
 
@@ -71,11 +71,19 @@
   margin: 50px;
 }
 
-.menu-button-style {
+.button-style-default {
   background-color: transparent;
   border: solid 3px #5db37f;
   width: 200px;
   height: 55px;
+  margin: 12px;
+}
+
+.input-style-default {
+  background-color: transparent;
+  border: solid 3px #5db37f;
+  width: 192px;
+  height: 46px;
   margin: 12px;
 }
 

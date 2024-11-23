@@ -1,5 +1,24 @@
-.save-box{
-    display: flex;
-    flex-direction: column;
-    border: solid 3px;
+input:focus-visible {
+    outline: none;
+}
+
+.first-container {
+display: flex;
+}
+
+.button-style-create-character {
+    background-color: transparent;
+    border: solid 3px #5db37f;
+    width: 60px;
+    height: 55px;
+    margin: 12px;
+    margin-left: 0px;
+}
+
+.input-style-create-character {
+    background-color: transparent;
+    border: solid 3px #5db37f;
+    width: 345px;
+    height: 46px;
+    margin: 12px;
 }

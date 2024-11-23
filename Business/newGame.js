@@ -5,14 +5,12 @@ document.getElementById('backButton').addEventListener('click', () => {
     ipcRenderer.send('main');
 });
 
-function testeChamada(){
+document.getElementById('createCharacter').addEventListener('click', () => {
   debugger
-  const characters = [
-    { name: 'Frodo', class: 'Hobbit', level: 5 },
-    { name: 'Gandalf', class: 'Wizard', level: 10 }
+  const name = document.getElementById('nameCaracter')
+  const character = [
+    { name: name.value, class: 'classeTeste', level: 1 },
   ];
-    
-  addPersonagem(characters);
-  var personagens = getPersonagens();
-}
+  addPersonagem(character);
+});
   

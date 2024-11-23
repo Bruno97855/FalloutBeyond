@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "0": {
+      "name": "Teste1",
+      "class": "classeTeste",
+      "level": 1
+    },
+    "id": 1
+  },
+  {
+    "0": {
+      "name": "Teste2",
+      "class": "classeTeste",
+      "level": 1
+    },
+    "id": 2
+  }
+]

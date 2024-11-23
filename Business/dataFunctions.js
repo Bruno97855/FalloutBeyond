@@ -20,8 +20,17 @@ function writeJsonFileSync(filepath, data, encoding = 'utf8') {
 // Função para adicionar um novo personagem
 function addPersonagem(personagem) {
   const personagens = readJsonFileSync(dataPath);
-  personagens.push(personagem);
+
+  // Gerar um novo id unico
+  const newId = personagens.length > 0
+    ? Math.max(...personagens.map(p => p.id)) + 1
+    : 1;
+
+  const personagemComId = { id: newId, ...personagem }; // Adiciona o id ao personagem
+  personagens.push(personagemComId);
+
   writeJsonFileSync(dataPath, personagens);
+  return personagemComId; // Retorna o personagem criado com o id
 }
 
 // Função para obter todos os personagens
