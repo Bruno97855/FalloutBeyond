@@ -65,7 +65,7 @@ Siga os passos abaixo para configurar o projeto no seu computador:
 
 Finalizar tarefa: Antes de fazer um build novo não esqueça de finalizar a tarefa do Fallout Beyond, erro de download mesmo com o aplicativo desinstalado.
 
-electron-reload: Por algum motivo o electron-reload gera um erro estranho de falta de arquivo no node_modules, até agora a solução foi desinstalar o electron-reload, retirar a sua referência no código e fazer novamente o build, pois nao é necessário em produção apenas em desenvolvimento. Código para desinstalar o electron-reload: npm uninstall electron-reload
+electron-reload: Por algum motivo o electron-reload gera um erro estranho de falta de arquivo no node_modules, até agora a solução foi desinstalar o electron-reload, retirar a sua referência no código e fazer novamente o build, pois nao é necessário em produção apenas em desenvolvimento. Comando para desinstalar o electron-reload: npm uninstall electron-reload
 
 
 
