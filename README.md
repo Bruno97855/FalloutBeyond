@@ -53,7 +53,7 @@ Siga os passos abaixo para configurar o projeto no seu computador:
     "appId": "com.example.app",
     "productName": "Fallout Beyond",
     "directories": {
-      "output": "dist"//coloque o caminho de sída que preferir
+      "output": "dist"//coloque o caminho de saída que preferir
     },
   }
 
