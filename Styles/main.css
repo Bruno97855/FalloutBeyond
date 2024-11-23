@@ -41,7 +41,7 @@
   font-size: xxx-large;
 }
 
-.xlxarge-font{
+.xxlarge-font{
   font-size: xx-large;
 }
 
@@ -52,6 +52,8 @@
 .mid-screen {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .full-screen {
@@ -68,20 +70,8 @@
   align-items: center;
   margin: 50px;
 }
-.div-rigth-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 50px;
-}
-.div-left-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 50px;
-}
 
-.menu-button-style {
+.button-style-default {
   background-color: transparent;
   border: solid 3px #5db37f;
   width: 200px;
@@ -89,9 +79,12 @@
   margin: 12px;
 }
 
-.two-parts-horizontal {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.input-style-default {
+  background-color: transparent;
+  border: solid 3px #5db37f;
+  width: 192px;
+  height: 46px;
+  margin: 12px;
 }
+
 

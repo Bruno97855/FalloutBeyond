@@ -41,5 +41,8 @@
       "createStartMenuShortcut": true,
       "shortcutName": "Fallout Beyond"
     }
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
   }
 }
