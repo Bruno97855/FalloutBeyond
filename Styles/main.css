@@ -87,4 +87,14 @@
   margin: 12px;
 }
 
+.table-style-default {
+  border-collapse: collapse;
+  border: solid 3px #5db37f;
+  width: 426px;
+  height: auto;
+}
 
+.table-style-default thead {
+  border-bottom: solid 3px #5db37f;
+  text-align: end;
+}

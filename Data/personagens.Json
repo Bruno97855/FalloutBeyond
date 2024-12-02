@@ -1,10 +1,7 @@
 [
   {
-    "0": {
-      "name": "G4T1NH4",
-      "class": "classeTeste",
-      "level": 1
-    },
-    "id": 1
+    "name": "G4T1NH4",
+    "class": "classeTeste",
+    "level": 1
   }
 ]
