@@ -85,11 +85,11 @@ ipcMain.on('credits', () => {
   });
 });
 
-// Quando o evento 'credits' é recebido, carregue 'credits.html'
-ipcMain.on('newGame', () => {
-  // Carrega o arquivo 'credits.html' na janela principal
-  mainWindow.loadFile(path.join(__dirname, 'Views', 'newGame.html')).catch((err) => {
+// Quando o evento 'play' é recebido, carregue 'play.html'
+ipcMain.on('play', () => {
+  // Carrega o arquivo 'play.html' na janela principal
+  mainWindow.loadFile(path.join(__dirname, 'Views', 'play.html')).catch((err) => {
     // Se houver um erro ao carregar o arquivo, exiba-o no console
-    console.error('Error loading newGame.html:', err);
+    console.error('Error loading play.html:', err);
   });
 });
