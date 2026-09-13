@@ -93,3 +93,12 @@ ipcMain.on('play', () => {
     console.error('Error loading play.html:', err);
   });
 });
+
+// Quando o evento 'attributes' é recebido, carregue 'attributes.html'
+ipcMain.on('attributes', () => {
+  // Carrega o arquivo 'attributes.html' na janela principal
+  mainWindow.loadFile(path.join(__dirname, 'Views', 'attributes.html')).catch((err) => {
+    // Se houver um erro ao carregar o arquivo, exiba-o no console
+    console.error('Error loading attributes.html:', err);
+  });
+});

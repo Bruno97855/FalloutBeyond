@@ -1,7 +1,21 @@
 [
   {
-    "name": "G4T1NH4",
+    "name": "teste",
     "class": "classeTeste",
-    "level": 1
+    "level": 1,
+    "attributes": {
+      "resistencia": 8,
+      "percepcao": 10,
+      "agilidade": 4,
+      "inteligencia": 4,
+      "forca": 6,
+      "carisma": 3,
+      "sorte": 5
+    },
+    "taggedSkills": [
+      "Ataque Desarmado",
+      "Explosivos",
+      "Armas de Energia"
+    ]
   }
 ]

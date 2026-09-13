@@ -1,4 +1,4 @@
-const { getPersonagens, addPersonagem } = require('../Business/dataFunctions.js');
+const { getPersonagens } = require('../Business/dataFunctions.js');
 
 document.getElementById('backButton').addEventListener('click', () => {
     const { ipcRenderer } = require('electron');
@@ -7,11 +7,23 @@ document.getElementById('backButton').addEventListener('click', () => {
 
 document.getElementById('confirm').addEventListener('click', () => {
   const saves = getPersonagens();
-  if(saves.length < 5){
-    const name = document.getElementById('nameCaracter')
-    const character = { name: name.value, class: 'classeTeste', level: 1 };
-    addPersonagem(character);
+  if (saves.length >= 5) {
+    return;
   }
+
+  const nameInput = document.getElementById('nameCaracter');
+  const name = nameInput.value.trim();
+
+  if (!name) {
+    nameInput.focus();
+    return;
+  }
+
+  // Guarda o nome escolhido para ser usado na tela de atributos
+  localStorage.setItem('newCharacterName', name);
+
+  const { ipcRenderer } = require('electron');
+  ipcRenderer.send('attributes');
 });
 
 document.addEventListener('DOMContentLoaded', function() {

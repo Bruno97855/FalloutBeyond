@@ -1,0 +1,68 @@
+.attributes-description {
+  text-align: center;
+  max-width: 950px;
+  margin: 10px auto;
+}
+
+.points-display {
+  text-align: center;
+  margin: 5px 0;
+}
+
+.points-display.over-limit {
+  color: #ff4d4d !important;
+}
+
+.attributes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.attribute-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px #5db37f;
+  padding: 8px 10px;
+  min-width: 110px;
+}
+
+.attribute-box label {
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.attribute-input {
+  width: 70px !important;
+  height: 34px !important;
+  margin: 0 !important;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.skill-label {
+  width: 160px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.bottom-buttons {
+  margin-top: 10px;
+}
