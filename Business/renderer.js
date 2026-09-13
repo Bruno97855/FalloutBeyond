@@ -4,7 +4,7 @@ document.getElementById('credits').addEventListener('click', () => {
   ipcRenderer.send('credits');
 });
 
-document.getElementById('newGame').addEventListener('click', () => {
+document.getElementById('play').addEventListener('click', () => {
   const { ipcRenderer } = require('electron');
-  ipcRenderer.send('newGame');
+  ipcRenderer.send('play');
 });

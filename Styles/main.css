@@ -49,6 +49,10 @@
   font-size: x-large;
 }
 
+.large-font{
+  font-size: large;
+}
+
 .mid-screen {
   display: flex;
   justify-content: center;
@@ -79,6 +83,14 @@
   margin: 12px;
 }
 
+.button-style-large {
+  background-color: transparent;
+  border: solid 3px #5db37f;
+  width: 270px;
+  height: 55px;
+  margin: 12px;
+}
+
 .input-style-default {
   background-color: transparent;
   border: solid 3px #5db37f;
@@ -87,4 +99,28 @@
   margin: 12px;
 }
 
+.table-style-default {
+  border-collapse: collapse;
+  border: solid 3px #5db37f;
+  width: 426px;
+  height: auto;
+}
 
+.table-style-default thead {
+  border-bottom: solid 3px #5db37f;
+  text-align: end;
+}
+
+.select-style-default {
+  background-color: transparent;
+  border: solid 3px #5db37f;
+  width: 200px;
+  height: 46px;
+  margin: 12px;
+  padding: 0 8px;
+}
+
+.select-style-default option {
+  background-color: #000000;
+  color: #5db37f;
+}

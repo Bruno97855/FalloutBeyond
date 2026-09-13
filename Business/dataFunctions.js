@@ -8,8 +8,12 @@ module.exports = {
 const dataPath = path.join(__dirname, '..', 'Data', 'personagens.json');
 
 function readJsonFileSync(filepath, encoding = 'utf8') {
-  const file = fs.readFileSync(filepath, encoding);
-  return JSON.parse(file);
+  if (fs.existsSync(filepath)) {
+    const file = fs.readFileSync(filepath, encoding);
+    return JSON.parse(file);
+  } else {
+    return [];
+  }
 }
 
 function writeJsonFileSync(filepath, data, encoding = 'utf8') {
@@ -21,16 +25,10 @@ function writeJsonFileSync(filepath, data, encoding = 'utf8') {
 function addPersonagem(personagem) {
   const personagens = readJsonFileSync(dataPath);
 
-  // Gerar um novo id unico
-  const newId = personagens.length > 0
-    ? Math.max(...personagens.map(p => p.id)) + 1
-    : 1;
-
-  const personagemComId = { id: newId, ...personagem }; // Adiciona o id ao personagem
-  personagens.push(personagemComId);
+  personagens.push(personagem);
 
   writeJsonFileSync(dataPath, personagens);
-  return personagemComId; // Retorna o personagem criado com o id
+  return personagem;
 }
 
 // Função para obter todos os personagens

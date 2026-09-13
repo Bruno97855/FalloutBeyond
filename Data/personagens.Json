@@ -1,18 +1,21 @@
 [
   {
-    "0": {
-      "name": "Teste1",
-      "class": "classeTeste",
-      "level": 1
+    "name": "teste",
+    "class": "classeTeste",
+    "level": 1,
+    "attributes": {
+      "resistencia": 8,
+      "percepcao": 10,
+      "agilidade": 4,
+      "inteligencia": 4,
+      "forca": 6,
+      "carisma": 3,
+      "sorte": 5
     },
-    "id": 1
-  },
-  {
-    "0": {
-      "name": "Teste2",
-      "class": "classeTeste",
-      "level": 1
-    },
-    "id": 2
+    "taggedSkills": [
+      "Ataque Desarmado",
+      "Explosivos",
+      "Armas de Energia"
+    ]
   }
 ]

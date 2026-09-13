@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fallout Beyond</title>
+  <link rel="stylesheet" href="../Styles/main.css">
+  <link rel="stylesheet" href="../Styles/attributes.css">
+</head>
+<body class="background-body">
+  <div class="full-screen">
+    <h1 class="font-style xxlarge-font">Distribuição de Atributos</h1>
+    <p class="font-style large-font attributes-description">
+      Distribua os <strong>40 pontos</strong> disponíveis entre os 7 atributos S.P.E.C.I.A.L.
+      (Resistência, Percepção, Agilidade, Inteligência, Força, Carisma e Sorte). Cada atributo
+      aceita de 0 a 10 pontos. Você também pode usar a rolagem aleatória para distribuir os pontos
+      automaticamente, ou escolher manualmente. Por fim, selecione as 3 perícias tag do personagem.
+    </p>
+
+    <p class="font-style xlarge-font points-display">
+      Pontos disponíveis: <span id="pointsLeft">40</span>
+    </p>
+
+    <div class="attributes-container" id="attributesContainer">
+      <div class="attribute-box">
+        <label class="font-style large-font" for="attr-resistencia">Resistência</label>
+        <input type="number" class="font-style input-style-default attribute-input xlarge-font" id="attr-resistencia" data-attr="resistencia" min="0" max="10" value="0">
+      </div>
+      <div class="attribute-box">
+        <label class="font-style large-font" for="attr-percepcao">Percepção</label>
+        <input type="number" class="font-style input-style-default attribute-input xlarge-font" id="attr-percepcao" data-attr="percepcao" min="0" max="10" value="0">
+      </div>
+      <div class="attribute-box">
+        <label class="font-style large-font" for="attr-agilidade">Agilidade</label>
+        <input type="number" class="font-style input-style-default attribute-input xlarge-font" id="attr-agilidade" data-attr="agilidade" min="0" max="10" value="0">
+      </div>
+      <div class="attribute-box">
+        <label class="font-style large-font" for="attr-inteligencia">Inteligência</label>
+        <input type="number" class="font-style input-style-default attribute-input xlarge-font" id="attr-inteligencia" data-attr="inteligencia" min="0" max="10" value="0">
+      </div>
+      <div class="attribute-box">
+        <label class="font-style large-font" for="attr-forca">Força</label>
+        <input type="number" class="font-style input-style-default attribute-input xlarge-font" id="attr-forca" data-attr="forca" min="0" max="10" value="0">
+      </div>
+      <div class="attribute-box">
+        <label class="font-style large-font" for="attr-carisma">Carisma</label>
+        <input type="number" class="font-style input-style-default attribute-input xlarge-font" id="attr-carisma" data-attr="carisma" min="0" max="10" value="0">
+      </div>
+      <div class="attribute-box">
+        <label class="font-style large-font" for="attr-sorte">Sorte</label>
+        <input type="number" class="font-style input-style-default attribute-input xlarge-font" id="attr-sorte" data-attr="sorte" min="0" max="10" value="0">
+      </div>
+    </div>
+
+    <div class="mid-screen">
+      <button class="font-style button-style-large xlarge-font" id="randomRollButton">Rolagem Aleatória</button>
+    </div>
+
+    <div class="skills-container">
+      <div class="skill-row">
+        <label class="font-style large-font skill-label" for="skill-1">1ª Perícia Tag</label>
+        <select class="font-style select-style-default xlarge-font tag-skill-select" id="skill-1"></select>
+      </div>
+      <div class="skill-row">
+        <label class="font-style large-font skill-label" for="skill-2">2ª Perícia Tag</label>
+        <select class="font-style select-style-default xlarge-font tag-skill-select" id="skill-2"></select>
+      </div>
+      <div class="skill-row">
+        <label class="font-style large-font skill-label" for="skill-3">3ª Perícia Tag</label>
+        <select class="font-style select-style-default xlarge-font tag-skill-select" id="skill-3"></select>
+      </div>
+    </div>
+
+    <div class="mid-screen bottom-buttons">
+      <div>
+        <button class="font-style button-style-default xlarge-font" id="backButton">back</button>
+        <button class="font-style button-style-default xlarge-font" id="confirmButton">Prosseguir</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../Business/attributes.js"></script>
+</html>
