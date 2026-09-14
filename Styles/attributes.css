@@ -1,7 +1,7 @@
 .attributes-description {
   text-align: center;
-  max-width: 950px;
-  margin: 10px auto;
+  max-width: min(950px, 92vw);
+  margin: clamp(4px, 1vh, 10px) auto;
 }
 
 .points-display {
@@ -17,8 +17,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-  margin: 10px 0;
+  gap: clamp(4px, 1vw, 8px);
+  margin: clamp(4px, 1vh, 10px) 0;
 }
 
 .attribute-box {
@@ -26,8 +26,8 @@
   flex-direction: column;
   align-items: center;
   border: solid 2px #5db37f;
-  padding: 8px 10px;
-  min-width: 110px;
+  padding: clamp(4px, 1vh, 8px) clamp(6px, 1.2vw, 10px);
+  min-width: clamp(85px, 11vw, 110px);
 }
 
 .attribute-box label {
@@ -36,8 +36,8 @@
 }
 
 .attribute-input {
-  width: 70px !important;
-  height: 34px !important;
+  width: clamp(50px, 6vw, 70px) !important;
+  height: clamp(28px, 4vh, 34px) !important;
   margin: 0 !important;
   text-align: center;
 }
@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 0;
+  margin: clamp(6px, 1.5vh, 15px) 0;
 }
 
 .skill-row {
@@ -54,15 +54,28 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 500px;
+  max-width: min(500px, 92vw);
+  flex-wrap: wrap;
 }
 
 .skill-label {
-  width: 160px;
+  width: clamp(110px, 20vw, 160px);
   text-align: right;
   margin-right: 10px;
 }
 
 .bottom-buttons {
-  margin-top: 10px;
+  margin-top: clamp(4px, 1vh, 10px);
+}
+
+@media (max-width: 520px) {
+  .skill-row {
+    flex-direction: column;
+  }
+
+  .skill-label {
+    width: auto;
+    text-align: center;
+    margin: 0 0 4px 0;
+  }
 }

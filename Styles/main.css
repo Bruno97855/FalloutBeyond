@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 .sometype-mono {
   font-family: "Sometype Mono", monospace;
   font-optical-sizing: auto;
@@ -10,6 +18,8 @@
  .background-body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden; /* Para cobrir toda a tela */
     background:
         linear-gradient(to bottom, 
@@ -38,19 +48,23 @@
 }
 
 .xxxlarge-font{
-  font-size: xxx-large;
+  font-size: clamp(22px, 4.5vw, 48px);
 }
 
 .xxlarge-font{
-  font-size: xx-large;
+  font-size: clamp(18px, 3.2vw, 32px);
 }
 
 .xlarge-font{
-  font-size: x-large;
+  font-size: clamp(14px, 2vw, 22px);
 }
 
 .large-font{
-  font-size: large;
+  font-size: clamp(12px, 1.6vw, 18px);
+}
+
+.small-font{
+  font-size: clamp(15px, 1.2vw, 18px);
 }
 
 .mid-screen {
@@ -62,47 +76,71 @@
 
 .full-screen {
   border: solid 3px #5db37f;
-  margin: 25px;
-  height: 92vh;
-  box-sizing: border-box; /* Garante que padding e border não aumentem a altura total */
-  padding: 20px; /* Exemplo de padding interno */
+  margin: clamp(8px, 2vh, 25px) clamp(8px, 2vw, 25px);
+  height: calc(100vh - clamp(16px, 4vh, 50px));
+  padding: clamp(8px, 2vh, 20px) clamp(8px, 2vw, 20px); /* Exemplo de padding interno */
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  scrollbar-color: #5db37f #000000; /* Firefox: thumb / track */
+  scrollbar-width: thin;
+}
+
+/* Estiliza a barra de rolagem (Chromium/Electron) para seguir o tema da tela */
+.full-screen::-webkit-scrollbar {
+  width: 12px;
+}
+
+.full-screen::-webkit-scrollbar-track {
+  background-color: #000000;
+  border-left: solid 1px #5db37f;
+}
+
+.full-screen::-webkit-scrollbar-thumb {
+  background-color: #5db37f;
+  border: solid 1px #000000;
+}
+
+.full-screen::-webkit-scrollbar-thumb:hover {
+  background-color: #7fd9a0;
 }
 
 .div-mid-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  margin: clamp(12px, 5vh, 50px);
 }
 
 .button-style-default {
   background-color: transparent;
   border: solid 3px #5db37f;
-  width: 200px;
-  height: 55px;
-  margin: 12px;
+  width: clamp(120px, 18vw, 200px);
+  height: clamp(38px, 6vh, 55px);
+  margin: clamp(6px, 1.2vh, 12px);
 }
 
 .button-style-large {
   background-color: transparent;
   border: solid 3px #5db37f;
-  width: 270px;
-  height: 55px;
-  margin: 12px;
+  width: clamp(150px, 24vw, 270px);
+  height: clamp(38px, 6vh, 55px);
+  margin: clamp(6px, 1.2vh, 12px);
 }
 
 .input-style-default {
   background-color: transparent;
   border: solid 3px #5db37f;
-  width: 192px;
-  height: 46px;
-  margin: 12px;
+  width: clamp(120px, 18vw, 192px);
+  height: clamp(34px, 5vh, 46px);
+  margin: clamp(6px, 1.2vh, 12px);
 }
 
 .table-style-default {
   border-collapse: collapse;
   border: solid 3px #5db37f;
-  width: 426px;
+  width: min(426px, 90vw);
   height: auto;
 }
 
@@ -114,13 +152,26 @@
 .select-style-default {
   background-color: transparent;
   border: solid 3px #5db37f;
-  width: 200px;
-  height: 46px;
-  margin: 12px;
+  width: clamp(140px, 18vw, 200px);
+  height: clamp(34px, 5vh, 46px);
+  margin: clamp(6px, 1.2vh, 12px);
   padding: 0 8px;
 }
 
 .select-style-default option {
   background-color: #000000;
   color: #5db37f;
+}
+
+@media (max-width: 640px) {
+  .full-screen {
+    margin: 6px;
+    padding: 8px;
+  }
+
+  .div-mid-screen,
+  .div-rigth-screen,
+  .div-left-screen {
+    margin: 10px;
+  }
 }

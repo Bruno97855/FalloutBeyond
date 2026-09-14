@@ -3,8 +3,12 @@ const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 
 // Configura o electron-reload, deve ser retirado para a hora da instalação
+// Ignora node_modules, arquivos ocultos e a pasta Data: sem isso, salvar um
+// personagem em Data/personagens.Json disparava um reload da janela atual,
+// cancelando a navegação para a próxima tela (ex.: attributes -> game).
 require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
+  ignored: [/node_modules|[/\\]\./, /[/\\]Data[/\\]/]
 });
 
 let mainWindow; // Declaração da variável mainWindow
@@ -100,5 +104,14 @@ ipcMain.on('attributes', () => {
   mainWindow.loadFile(path.join(__dirname, 'Views', 'attributes.html')).catch((err) => {
     // Se houver um erro ao carregar o arquivo, exiba-o no console
     console.error('Error loading attributes.html:', err);
+  });
+});
+
+// Quando o evento 'game' é recebido, carregue 'game.html'
+ipcMain.on('game', () => {
+  // Carrega o arquivo 'game.html' na janela principal
+  mainWindow.loadFile(path.join(__dirname, 'Views', 'game.html')).catch((err) => {
+    // Se houver um erro ao carregar o arquivo, exiba-o no console
+    console.error('Error loading game.html:', err);
   });
 });
