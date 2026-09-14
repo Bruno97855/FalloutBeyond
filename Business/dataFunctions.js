@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 module.exports = {
     getPersonagens,
-    addPersonagem
+    addPersonagem,
+    updatePersonagem,
+    deletePersonagem
 };
 
 const dataPath = path.join(__dirname, '..', 'Data', 'personagens.json');
@@ -25,13 +27,45 @@ function writeJsonFileSync(filepath, data, encoding = 'utf8') {
 function addPersonagem(personagem) {
   const personagens = readJsonFileSync(dataPath);
 
-  personagens.push(personagem);
+  // Calcula o próximo ID com base no maior ID já existente
+  const nextId = personagens.reduce((maxId, p) => Math.max(maxId, p.id || 0), 0) + 1;
+  const personagemComId = { id: nextId, ...personagem };
+
+  personagens.push(personagemComId);
 
   writeJsonFileSync(dataPath, personagens);
-  return personagem;
+  return personagemComId;
 }
 
 // Função para obter todos os personagens
 function getPersonagens() {
   return readJsonFileSync(dataPath);
+}
+
+// Função para atualizar um personagem já existente (identificado pelo id)
+function updatePersonagem(personagem) {
+  const personagens = readJsonFileSync(dataPath);
+  const index = personagens.findIndex((p) => p.id === personagem.id);
+
+  if (index === -1) {
+    return null;
+  }
+
+  personagens[index] = personagem;
+  writeJsonFileSync(dataPath, personagens);
+  return personagem;
+}
+
+// Função para excluir permanentemente um personagem (identificado pelo id)
+function deletePersonagem(id) {
+  const personagens = readJsonFileSync(dataPath);
+  const index = personagens.findIndex((p) => p.id === id);
+
+  if (index === -1) {
+    return false;
+  }
+
+  personagens.splice(index, 1);
+  writeJsonFileSync(dataPath, personagens);
+  return true;
 }

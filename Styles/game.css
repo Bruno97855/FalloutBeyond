@@ -1,0 +1,190 @@
+.game-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 20px);
+  margin-bottom: clamp(4px, 1vh, 10px);
+}
+
+.game-scroll {
+  overflow-y: visible;
+  height: auto;
+  padding-right: 6px;
+}
+
+.game-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(6px, 1.5vw, 12px);
+  border-bottom: 1px solid rgba(93, 179, 127, 0.35);
+  padding: clamp(6px, 1.2vh, 10px) 0;
+}
+
+.attributes-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(6px, 1.5vw, 12px);
+  border-bottom: 1px solid rgba(93, 179, 127, 0.35);
+  padding-bottom: clamp(8px, 1.5vh, 14px);
+  margin-bottom: clamp(8px, 1.5vh, 14px);
+  overflow-x: auto;
+  scrollbar-color: #5db37f #000000;
+  scrollbar-width: thin;
+}
+
+.attributes-row::-webkit-scrollbar {
+  height: 10px;
+}
+
+.attributes-row::-webkit-scrollbar-track {
+  background-color: #000000;
+  border-top: solid 1px #5db37f;
+}
+
+.attributes-row::-webkit-scrollbar-thumb {
+  background-color: #5db37f;
+  border: solid 1px #000000;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(6px, 1.5vw, 12px);
+}
+
+.game-attr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px #5db37f;
+  padding: clamp(4px, 1vh, 6px) clamp(6px, 1.4vw, 10px);
+  min-width: clamp(80px, 10vw, 100px);
+  flex-shrink: 0;
+}
+
+.game-attr-box .attr-value {
+  font-size: xx-large;
+}
+
+.game-attr-box .attr-bonus {
+  font-size: small;
+  opacity: 0.8;
+}
+
+.game-skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px #5db37f;
+  padding: clamp(4px, 1vh, 6px) clamp(6px, 1.4vw, 10px);
+  min-width: clamp(100px, 13vw, 130px);
+  position: relative;
+}
+
+.game-skill-box.tagged {
+  border-color: #e0c341;
+  box-shadow: 0 0 8px rgba(224, 195, 65, 0.7);
+}
+
+.tag-badge {
+  position: absolute;
+  top: -10px;
+  right: -6px;
+  background-color: #000;
+  color: #e0c341;
+  border: solid 1px #e0c341;
+  font-size: x-small;
+  padding: 1px 4px;
+}
+
+.game-stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.game-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px #5db37f;
+  padding: clamp(4px, 1.2vh, 6px) clamp(6px, 1.6vw, 10px);
+  min-width: clamp(90px, 12vw, 120px);
+}
+
+.game-stat-box .stat-hint {
+  font-size: x-small;
+  opacity: 0.7;
+}
+
+.stat-input {
+  background-color: transparent;
+  border: solid 2px #5db37f;
+  width: clamp(60px, 8vw, 80px) !important;
+  height: clamp(30px, 4.5vh, 38px) !important;
+  margin: 4px 0 !important;
+  text-align: center;
+}
+
+.skill-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #5db37f;
+  width: 60px;
+  text-align: center;
+}
+
+.attr-input {
+  background-color: transparent;
+  border: solid 2px #5db37f;
+  width: 60px;
+  height: 34px;
+  text-align: center;
+  margin: 2px 0 !important;
+}
+
+.game-footer-panels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.game-panel {
+  border: solid 2px #5db37f;
+  padding: clamp(6px, 1.5vh, 10px) clamp(8px, 2vw, 15px);
+  min-width: min(260px, 90vw);
+}
+
+@media (max-width: 640px) {
+  .game-row,
+  .skills-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .game-skill-box {
+    width: 100%;
+  }
+}
+
+.game-panel ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+
+.condition-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fallout Beyond</title>
+  <link rel="stylesheet" href="../Styles/main.css">
+  <link rel="stylesheet" href="../Styles/game.css">
+</head>
+<body class="background-body">
+  <div class="full-screen">
+    <div class="game-header">
+      <h1 class="font-style xxlarge-font" id="charName">Personagem</h1>
+      <p class="font-style large-font">Nível <input type="number" class="font-style stat-input" id="charLevel" min="1" value="1"></p>
+      <p class="font-style large-font">XP <input type="number" class="font-style stat-input" id="charXp" min="0" value="0"> / <span id="charXpMax">10</span></p>
+      <p class="font-style large-font">PV Máx <input type="number" class="font-style stat-input" id="statPvMax" min="0" value="0"></p>
+      <p class="font-style large-font">PV <input type="number" class="font-style stat-input" id="statPv" min="0" value="0"></p>
+      <p class="font-style large-font">PA <input type="number" class="font-style stat-input" id="statPontosAcao" min="0" value="0"></p>
+    </div>
+
+    <div class="game-stats-container">
+      <div class="game-stat-box">
+        <input type="number" class="font-style xlarge-font stat-input" id="statProtVeneno" min="0" max="85" value="0">
+        <span class="font-style small-font">% Prot. Veneno</span>
+        <span class="stat-hint font-style">máx 85%</span>
+      </div>
+      <div class="game-stat-box">
+        <input type="number" class="font-style xlarge-font stat-input" id="statProtRadiacao" min="0" max="85" value="0">
+        <span class="font-style small-font">% Prot. Radiação</span>
+        <span class="stat-hint font-style">máx 85%</span>
+      </div>
+      <div class="game-stat-box">
+        <input type="number" class="font-style xlarge-font stat-input" id="statCritico" min="0" max="100" value="0">
+        <span class="font-style small-font">% Crítico</span>
+        <span class="stat-hint font-style">no d100</span>
+      </div>
+      <div class="game-stat-box">
+        <span class="font-style small-font">Armadura</span>
+        <input type="number" class="font-style xlarge-font stat-input" id="statArmadura" min="0" value="0">
+      </div>
+      <div class="game-stat-box">
+        <span class="font-style small-font">Radiação</span>
+        <input type="number" class="font-style xlarge-font stat-input" id="statRadiacao" min="0" value="0">
+      </div>
+    </div>
+
+    <div class="game-scroll">
+      <div id="attributesRows"></div>
+
+      <div class="game-footer-panels">
+        <div class="game-panel">
+          <p class="font-style large-font">Custos de Ação</p>
+          <ul class="font-style">
+            <li>Mover (6m) = 3PA</li>
+            <li>Correr (12m) = 5PA</li>
+            <li>Furtivo (3m) = 3PA</li>
+            <li>Recarregar = 3PA</li>
+            <li>Pegar e usar item = 4PA</li>
+            <li>Teste de Habilidade = 3PA</li>
+          </ul>
+        </div>
+        <div class="game-panel">
+          <p class="font-style large-font">Condições e Ferimentos</p>
+          <div class="condition-item font-style">
+            <input type="checkbox" id="cond-braco"><label for="cond-braco">Braço(s) Quebrado(s) (-20% nas Habilidades)</label>
+          </div>
+          <div class="condition-item font-style">
+            <input type="checkbox" id="cond-perna"><label for="cond-perna">Perna(s) Quebrada(s) (-5 Pontos de Ação, mínimo 1)</label>
+          </div>
+          <div class="condition-item font-style">
+            <input type="checkbox" id="cond-quimica"><label for="cond-quimica">Dependência Química (-1 Agilidade, -1 Carisma)</label>
+          </div>
+          <div class="condition-item font-style">
+            <input type="checkbox" id="cond-alcoolica"><label for="cond-alcoolica">Dependência Alcoólica (-1 Resistência, -1 Força)</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mid-screen bottom-buttons">
+      <button class="font-style button-style-default xlarge-font" id="backButton">Voltar</button>
+    </div>
+  </div>
+</body>
+<script src="../Business/game.js"></script>
+</html>

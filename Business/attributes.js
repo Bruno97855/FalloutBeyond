@@ -185,9 +185,9 @@ function confirmCharacter() {
     taggedSkills
   };
 
-  addPersonagem(character);
+  const savedCharacter = addPersonagem(character);
   localStorage.removeItem('newCharacterName');
+  localStorage.setItem('currentCharacterId', savedCharacter.id);
 
-  alert('Personagem salvo com sucesso!');
-  ipcRenderer.send('play');
+  ipcRenderer.send('game');
 }
